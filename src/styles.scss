@@ -1,0 +1,32 @@
+@import 'assets/styles/variables.scss';
+
+body {
+  background-color: #efefef;
+}
+
+.almundo-text-primary {
+  color: $text-primary;
+}
+
+.almundo-btn-primary, .almundo-btn-primary:hover {
+  background: #002979;
+  color: white;
+}
+
+.card.filter-accordion
+.card.filter-accordion .card-header,
+.panel.filter-accordion {
+  background-color: white;
+}
+.panel.filter-accordion .panel-body {
+  padding: 0px;
+}
+
+.card.inner-filter-accordion
+.card.inner-filter-accordion .card-header,
+.panel.inner-filter-accordion {
+  background-color: white;
+}
+.panel.inner-filter-accordion .panel-body {
+  padding: 1.25rem;
+}

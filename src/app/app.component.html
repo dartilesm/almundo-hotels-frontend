@@ -1,0 +1,20 @@
+<div class="toolbar" role="banner">
+  <img
+    alt="Almundo Logo"
+    [src]="'logo-almundo.svg' | directory: directory.LOGO"
+  />
+    <div class="spacer"></div>
+</div>
+
+<div class="content">
+  <div class="row">
+    <div class="col-md-12 col-lg-4 hotel-filter">
+      <app-filters (filter)="setHotels($event)"></app-filters>
+    </div>
+    <div class="col-md-12 col-lg-8">
+      <cdk-virtual-scroll-viewport [itemSize]="hotelItemSize" class="hotel-list">
+        <app-hotel #hotelItem [hotel]="hotel" *cdkVirtualFor="let hotel of hotels | async"></app-hotel>
+      </cdk-virtual-scroll-viewport>
+    </div>
+  </div>
+</div>

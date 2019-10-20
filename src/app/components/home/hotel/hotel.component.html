@@ -1,0 +1,32 @@
+<div class="card mb-3">
+  <div class="row hotel-container">
+    <div class="col-xs-12 col-md-8 col-lg-6 col-xl-8 d-flex p-1 flex-column flex-sm-column flex-md-row flex-lg-column flex-xl-row">
+      <div class="hotel-image pl-1">
+        <img [src]="hotel.image | directory: directory.HOTELS" class="w-100" alt="hotel">
+      </div>
+      <div class="hotel-details ml-2">
+        <p class="m-0 ml-2 almundo-text-primary">
+          <b>{{hotel.name}}</b>
+        </p>
+        <div class="hotel-stars">
+          <fa-icon *ngFor="let star of [] | fill: hotel.stars" class="ml-2" [icon]="faStar" [styles]="{'color': '#ffbb00'}"></fa-icon>
+        </div>
+        <div class="hotel-amenities">
+          <img *ngFor="let amenity of hotel.amenities" class="ml-2" [src]="amenity| directory: directory.AMENITIES" alt="amenity" width="14">
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4 col-lg-6 col-xl-4 almundo-border">
+      <div class="card-body d-flex justify-content-center align-items-center flex-column">
+        <p class="card-text text-center">Precio por noche por habitación</p>
+        <div class="price d-flex align-items-center justify-content-center">
+          <h3 class="almundo-price mr-2">ARS</h3>
+          <h1 class="almundo-price">{{hotel.price | number}}</h1>
+        </div>
+        <button class="btn almundo-btn-primary btn-block">
+          <b>Ver Hotel</b>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

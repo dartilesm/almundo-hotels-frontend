@@ -1,0 +1,69 @@
+$toolbar-height: 60px;
+$content-padding: 20px;
+$hotel-list-md-height: calc(100vh - #{($content-padding * 2) + $toolbar-height});
+$hotel-list-sm-height: calc(100vh - #{($content-padding * 2) + $toolbar-height + 160px});
+$hotel-list-xs-height: calc(100vh - #{($content-padding * 2) + $toolbar-height + 45px});
+
+:host {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+  .toolbar {
+    height: $toolbar-height;
+    display: flex;
+    align-items: center;
+    background-color: #002979;
+    color: white;
+    font-weight: 600;
+    img {
+      margin: 0 16px;
+    }
+  }
+
+  .content {
+    padding: $content-padding;
+    height: calc(100vh - #{$toolbar-height});
+    @media screen and (max-width: 576px) {
+      padding: 0;
+      > div:first-child {
+        margin: 0;
+      }
+      * {
+        padding: 0;
+      }
+    }
+  }
+
+  .hotel-list {
+    height: $hotel-list-md-height;
+    @media screen and (max-width: 991px) {
+      height: $hotel-list-sm-height;
+      margin-top: 20px;
+    }
+    @media screen and (max-width: 576px) {
+      margin-top: 80px;
+      height: $hotel-list-xs-height;
+    }
+  }
+  .hotel-filter {
+    @media screen and (max-width: 576px) {
+      position: absolute;
+      z-index: 1;
+    }
+  }
+}

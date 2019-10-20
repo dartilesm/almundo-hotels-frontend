@@ -1,0 +1,26 @@
+.almundo-price {
+  color: #e16800;
+}
+
+
+.hotel-container {
+  margin: 0;
+  .hotel-image {
+    height:100%;
+    max-height: 250px;
+    object-fit: cover;
+    overflow: hidden;
+    @media screen and (max-width: 576px) {
+      max-height: 500px;
+    }
+  }
+  .almundo-border {
+    @media screen and (max-width: 767px) {
+      border-top: 2px dashed rgb(164, 164, 164);
+      margin-top: 20px;
+    }
+    @media screen and (min-width: 768px) {
+      border-left: 2px dashed rgb(164, 164, 164);
+    }
+  }
+}
