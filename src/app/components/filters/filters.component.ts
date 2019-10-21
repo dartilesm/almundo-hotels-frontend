@@ -9,7 +9,7 @@ import { IFilters } from '../../models/filters';
 })
 export class FiltersComponent implements OnInit {
 
-  @Output() filter = new EventEmitter();
+  @Output() filter = new EventEmitter<IFilters>();
   filters: IFilters = {};
   toggleAllStars: boolean;
   faSearch = faSearch;
