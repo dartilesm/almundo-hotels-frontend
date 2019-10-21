@@ -25,7 +25,6 @@ export class AppComponent {
   @Debounce(1000)
   getHotelItemSize() {
     this.hotelItemSize = ((((this.hotelItem || {} as any).nativeElement as any) || {} as any).firstElementChild || {}).offsetHeight;
-    console.log((this.hotelItem.nativeElement as any).firstElementChild, this.hotelItemSize);
   }
 
   setHotels(filters = {}): void {
