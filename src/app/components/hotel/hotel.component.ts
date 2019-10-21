@@ -1,7 +1,7 @@
-import { DIRECTORY } from './../../../constants/directory.enum';
-import { IHotel } from './../../../models/hotel';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { DIRECTORY } from '../../constants/directory.enum';
+import { IHotel } from '../../models/hotel';
 
 @Component({
   selector: 'app-hotel',

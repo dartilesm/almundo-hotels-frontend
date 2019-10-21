@@ -1,6 +1,6 @@
-import { IFilters } from './../../../models/filters';
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { faCaretUp, faCaretDown, faSearch, faStar } from '@fortawesome/free-solid-svg-icons';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { faCaretDown, faCaretUp, faSearch, faStar } from '@fortawesome/free-solid-svg-icons';
+import { IFilters } from '../../models/filters';
 
 @Component({
   selector: 'app-filters',

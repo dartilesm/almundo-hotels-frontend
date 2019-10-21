@@ -1,9 +1,8 @@
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HotelComponent } from './components/hotel/hotel.component';
 import { DIRECTORY } from './constants/directory.enum';
 import { Debounce } from './decorators/debounce';
-import { Component, ElementRef, HostListener, ViewChild, OnInit, AfterViewChecked, DoCheck } from '@angular/core';
-import { Observable } from 'rxjs';
-import { finalize } from 'rxjs/operators';
-import { HotelComponent } from './components/home/hotel/hotel.component';
 import { IHotel } from './models/hotel';
 import { HotelsService } from './services/hotels.service';
 
